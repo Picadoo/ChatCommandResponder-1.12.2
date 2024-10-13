@@ -1,0 +1,139 @@
+[33mcommit d480795a36708a1e0840ce9448f9070961a43a91[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: picado <1322942653@qq,com>
+Date:   Sun Oct 13 15:09:25 2024 +0800
+
+    Initial commit
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..12f8644[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m# eclipse[m
+[32m+[m[32mbin[m
+[32m+[m[32m*.launch[m
+[32m+[m[32m.settings[m
+[32m+[m[32m.metadata[m
+[32m+[m[32m.classpath[m
+[32m+[m[32m.project[m
+[32m+[m
+[32m+[m[32m# idea[m
+[32m+[m[32mout[m
+[32m+[m[32m*.ipr[m
+[32m+[m[32m*.iws[m
+[32m+[m[32m*.iml[m
+[32m+[m[32m.idea[m
+[32m+[m
+[32m+[m[32m# gradle[m
+[32m+[m[32mbuild[m
+[32m+[m[32m.gradle[m
+[32m+[m
+[32m+[m[32m# other[m
+[32m+[m[32meclipse[m
+[32m+[m[32mrun[m
+[32m+[m
+[32m+[m[32m# Files from Forge MDK[m
+[32m+[m[32mforge*changelog.txt[m
+[1mdiff --git a/CREDITS.txt b/CREDITS.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..589f482[m
+[1m--- /dev/null[m
+[1m+++ b/CREDITS.txt[m
+[36m@@ -0,0 +1,65 @@[m
+[32m+[m[32mMinecraft Forge: Credits/Thank You[m
+[32m+[m
+[32m+[m[32mForge is a set of tools and modifications to the Minecraft base game code to assist[m[41m [m
+[32m+[m[32mmod developers in creating new and exciting content. It has been in development for[m[41m [m
+[32m+[m[32mseveral years now, but I would like to take this time thank a few people who have[m[41m [m
+[32m+[m[32mhelped it along it's way.[m
+[32m+[m
+[32m+[m[32mFirst, the people who originally created the Forge projects way back in Minecraft[m[41m [m
+[32m+[m[32malpha. Eloraam of RedPower, and SpaceToad of Buildcraft, without their acceptiance[m[41m [m
+[32m+[m[32mof me taking over the project, who knows what Minecraft modding would be today.[m
+[32m+[m
+[32m+[m[32mSecondly, someone who has worked with me, and developed some of the core features[m
+[32m+[m[32mthat allow modding to he as functional, and as simple as it is, cpw. For developing[m
+[32m+[m[32mFML, which stabelized the client and server modding ecosystem. As well as the base[m
+[32m+[m[32mloading system that allows us to modify Minecraft's code as elegently as possible.[m
+[32m+[m
+[32m+[m[32mMezz, who has stepped up as the issue and pull request manager. Helping to keep me[m
+[32m+[m[32msane as well as guiding the community into creating better additions to Forge.[m
+[32m+[m
+[32m+[m[32mSearge, Bspks, Fesh0r, ProfMobious, and all the rest over on the MCP team {of which[m[41m [m
+[32m+[m[32mI am a part}. For creating some of the core tools needed to make Minecraft modding[m[41m [m
+[32m+[m[32mboth possible, and as stable as can be.[m
+[32m+[m[32m  On that note, here is some specific information of the MCP data we use:[m
+[32m+[m[32m    * Minecraft Coder Pack (MCP) *[m
+[32m+[m[32m      Forge Mod Loader and Minecraft Forge have permission to distribute and automatically[m[41m [m
+[32m+[m[32m      download components of MCP and distribute MCP data files. This permission is not[m[41m [m
+[32m+[m[32m      transitive and others wishing to redistribute the Minecraft Forge source independently[m
+[32m+[m[32m      should seek permission of MCP or remove the MCP data files and request their users[m[41m [m
+[32m+[m[32m      to download MCP separately.[m
+[32m+[m[41m      [m
+[32m+[m[32mAnd lastly, the countless community members who have spent time submitting bug reports,[m[41m [m
+[32m+[m[32mpull requests, and just helping out the community in general. Thank you.[m
+[32m+[m
+[32m+[m[32m--LexManos[m
+[32m+[m
+[32m+[m[32m=========================================================================[m
+[32m+[m
+[32m+[m[32mThis is Forge Mod Loader.[m
+[32m+[m
+[32m+[m[32mYou can find the source code at all times at https://github.com/MinecraftForge/MinecraftForge/tree/1.12.x/src/main/java/net/minecraftforge/fml[m
+[32m+[m
+[32m+[m[32mThis minecraft mod is a clean open source implementation of a mod loader for minecraft servers[m
+[32m+[m[32mand minecraft clients.[m
+[32m+[m
+[32m+[m[32mThe code is authored by cpw.[m
+[32m+[m
+[32m+[m[32mIt began by partially implementing an API defined by the client side ModLoader, authored by Risugami.[m
+[32m+[m[32mhttp://www.minecraftforum.net/topic/75440-[m
+[32m+[m[32mThis support has been dropped as of Minecraft release 1.7, as Risugami no longer maintains ModLoader.[m
+[32m+[m
+[32m+[m[32mIt also contains suggestions and hints and generous helpings of code from LexManos, author of MinecraftForge.[m
+[32m+[m[32mhttp://www.minecraftforge.net/[m
+[32m+[m
+[32m+[m[32mAdditionally, it contains an implementation of topological sort based on that[m[41m [m
+[32m+[m[32mpublished at http://keithschwarz.com/interesting/code/?dir=topological-sort[m
+[32m+[m
+[32m+[m[32mIt also contains code from the Maven project for performing versioned dependency[m
+[32m+[m[32mresolution. http://maven.apache.org/[m
+[32m+[m
+[32m+[m[32mIt also contains a partial repackaging of the javaxdelta library from http://sourceforge.net/projects/javaxdelta/[m
+[32m+[m[32mwith credit to it's authors.[m
+[32m+[m
+[32m+[m[32mForge Mod Loader downloads components from the Minecraft Coder Pack[m
+[32m+[m[32m(http://mcp.ocean-labs.de/index.php/Main_Page) with kind permission from the MCP team.[m
+[32m+[m
+[1mdiff --git a/LICENSE-Paulscode IBXM Library.txt b/LICENSE-Paulscode IBXM Library.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d4884b0[m
+[1m--- /dev/null[m
+[1m+++ b/LICENSE-Paulscode IBXM Library.txt[m	
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32mIBXM is copyright (c) 2007, Martin Cameron, and is licensed under the BSD License.[m
+[32m+[m[32mAll rights reserved.[m
+[32m+[m
+[32m+[m[32mRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:[m
+[32m+[m
+[32m+[m[32mRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32mRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.[m
+[32m+[m[32mNeither the name of mumart nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.[m
+[32m+[m[32mTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[1mdiff --git a/LICENSE-Paulscode SoundSystem CodecIBXM.txt b/LICENSE-Paulscode SoundSystem CodecIBXM.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a68a494[m
+[1m--- /dev/null[m
+[1m+++ b/LICENSE-Paulscode SoundSystem CodecIBXM.txt[m	
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32mSoundSystem CodecIBXM Class License:[m
+[32m+[m
+[32m+[m[32mYou are free to use this class for any purpose, commercial or otherwise.[m
+[32m+[m[32mYou may modify this class or source code, and distribute it any way you[m
+[32m+[m[32mlike, provided the following conditions are met:[m
+[32m+[m
+[32m+[m[32m1) You may not falsely claim to be the author of this class or any[m
+[32m+[m[32m   unmodified portion of it.[m
+[32m+[m[32m2) You may not copyright this class or a mod
