@@ -1,7 +1,7 @@
 Chat Command Responder Mod 
 
 Chat Command Responder 是一款专为 Minecraft 设计的客户端模组，其主要功能是根据聊天框中的关键词自动执行相应的命令。这款模组的目的是帮助玩家在游戏中快速响应聊天信息，自动触发预定义的指令，提高玩家在多人游戏中的互动效率。
-
+仅支持Minecraft 1.12.2版本
 主要功能
 
 关键词自动响应
